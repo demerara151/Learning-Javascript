@@ -1,4 +1,2 @@
 # Learning Javascript
 Javascriptを勉強した痕跡と他人に教えた軌跡
-
-find out what is bug
