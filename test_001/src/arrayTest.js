@@ -14,9 +14,9 @@ const products = [ "パンツ:6.99", "靴下:5.99", "T シャツ:14.99", "ズボ
 products.forEach(vals => {
 	const val = vals.split(":")
 	const name = val[0]
-	price = Number(val[1])
+	const price = Number(val[1])
 	total += price
-	let itemText = `${name}-\$${price}`
+	let itemText = `${name}- \$${price}`
 	console.log(itemText)
 })
 
@@ -29,4 +29,4 @@ products.forEach(vals => {
 // 	console.log(itemText)
 // }
 
-console.log(`Total: \$ ${total.toFixed(2)}`)
+console.log(`Total: \$${total.toFixed(2)}`)
