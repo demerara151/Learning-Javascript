@@ -9,7 +9,7 @@ Javascriptを勉強した履歴
     deno run main.js
     ```
 
-* `html` と `css` を必要とするスクリプトの場合は、`miniserve` を使う 
+* `html` と `css` を必要とするスクリプトの場合は、`miniserve` を使う
 
     ```powershell
     miniserve directory_name
