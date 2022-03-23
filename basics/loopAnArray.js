@@ -14,13 +14,13 @@ const people = [
 let admitted = "Admit: "
 let refused = "Refuse: "
 
-for (const name of people) {
-	if (name === "Phil" || name === "Lola") {
-		refused += `${i}, `
+people.forEach(person => {
+	if (person === "Phil" || person === "Lola") {
+		refused += `${person}, `
 	} else {
-		admitted += `${i}, `
+		admitted += `${person}, `
 	}
-}
+})
 
 // Add dot to the end of the last name
 // Using slice method to extract names til the end (except last ", ")
