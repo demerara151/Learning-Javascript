@@ -24,7 +24,7 @@ class Polygon {
 	}
 }
 
-let p = new Polygon(300, 400)
+const p = new Polygon(300, 400)
 p.sayName()
 console.log(`The width of this polygon is ${p.width}`)
 
@@ -53,7 +53,7 @@ class Square extends Polygon {
 	}
 }
 
-let s = new Square(5)
+const s = new Square(5)
 
 s.sayName()
 console.log(s)
@@ -74,7 +74,7 @@ class Rectangle extends Polygon {
 	}
 }
 
-let r = new Rectangle(50, 60)
+const r = new Rectangle(50, 60)
 r.sayName()
 
 // Example 4: 静的なメソッドを定義する
