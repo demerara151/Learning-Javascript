@@ -7,7 +7,7 @@ const stations = [
 	"HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield",
 ]
 
-const formatString = (str: string) => {
+const formatString = (str: string): string => {
 	const code = str.slice(0, 3)
 	const description = str.split(";")[1]
 	return `${code}: ${description}`

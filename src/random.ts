@@ -18,3 +18,15 @@ console.log(random3(-7, 7)) // -7～-1, +1～+7の間のランダムな数値を
 ③は、canvasで物体を動かしたい場合によく使う
 0が返ってくると物体が止まってしまう可能性があるため
 */
+
+/** 配列からランダムに値を取得する関数
+@param list 文字列のみを最低１つ含む配列
+@return ランダムに選ばれた文字列
+*/
+const getRandomValue = (list: string[]): string => {
+	const index = Math.floor(Math.random() * list.length)
+	return list[index]
+}
+
+const names = ["Alice", "Bob", "Camilla", "Dave", "Evan", "Frank"]
+console.log(getRandomValue(names))
