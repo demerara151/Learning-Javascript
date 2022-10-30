@@ -1,13 +1,13 @@
 // simple example of two scopes: global and local
-const num = 3
-console.log(`This num is global variable: ${num}`) // you can access num because num is globally defined
+const num = 3;
+console.log(`This num is global variable: ${num}`); // you can access num because num is globally defined
 
 const sum = (num: number, num2: number) => {
-	const result = num + num2 // you can also access num from here
-	console.log(`${num} + ${num2} は ${result}です`)
-}
+  const result = num + num2; // you can also access num from here
+  console.log(`${num} + ${num2} は ${result}です`);
+};
 
-sum(12, 31)
+sum(12, 31);
 
 // console.log(`計算結果は${result}です`) // you can't access result from here because result is not global
 

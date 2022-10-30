@@ -1,60 +1,60 @@
-const random = (x: number) => Math.floor(Math.random() * x)
+const random = (x: number) => Math.floor(Math.random() * x);
 
 class Monster {
-	name: string
-	HP: number
-	items: string[]
+  name: string;
+  HP: number;
+  items: string[];
 
-	constructor(name: string, HP: number, items: string[]) {
-		this.name = name
-		this.HP = HP
-		this.items = items
-	}
-	dieOrNot() {
-		if (this.HP <= 0) {
-			console.log(`${this.name}を倒した！`)
-		} else {
-			console.log(`${this.name}はまだピンピンしている！`)
-		}
-	}
-	getItems() {
-		return this.items[random(this.items.length)]
-	}
+  constructor(name: string, HP: number, items: string[]) {
+    this.name = name;
+    this.HP = HP;
+    this.items = items;
+  }
+  dieOrNot() {
+    if (this.HP <= 0) {
+      console.log(`${this.name}を倒した！`);
+    } else {
+      console.log(`${this.name}はまだピンピンしている！`);
+    }
+  }
+  getItems() {
+    return this.items[random(this.items.length)];
+  }
 }
 
 const monster = new Monster("リヴァイアサン", 8712, [
-	"海神のお守り",
-	"ウォーターリング",
-	"水の紋章",
-	`${random(3000)}ゴールド`,
-])
+  "海神のお守り",
+  "ウォーターリング",
+  "水の紋章",
+  `${random(3000)}ゴールド`,
+]);
 
 // 例題１：値の代入を利用してリヴァイアサンを倒してください。
-monster.HP = 0
-monster.dieOrNot()
+monster.HP = 0;
+monster.dieOrNot();
 
 // 例題２：リヴァイアサンのプロパティを表示してください
-console.log(monster)
+console.log(monster);
 
 // 例題３：getItems()を10回繰り返し実行し、その結果を配列に格納して表示してください。
-const loot = []
-let i = 0
+const loot = [];
+let i = 0;
 while (i < 10) {
-	loot.push(monster.getItems())
-	i++
+  loot.push(monster.getItems());
+  i++;
 }
-console.log(loot)
+console.log(loot);
 
 // 例題４：配列「loot」に「ウォーターリング」がいくつ含まれているか確認してコンソールに「ウォーターリング」の獲得数を表示してください。もし結果が０だった場合は、獲得できなかったことを表示するように、獲得したアイテムが全て「ウォーターリング」だった場合は、全て「ウォーターリング」だったことを表示してください。
-const index = monster.items.indexOf("ウォーターリング")
-const ring = monster.items[index]
-const rings = loot.filter(item => item === ring)
+const index = monster.items.indexOf("ウォーターリング");
+const ring = monster.items[index];
+const rings = loot.filter((item) => item === ring);
 if (rings.length === 0) {
-	console.log(`${ring}を獲得できませんでした。`)
+  console.log(`${ring}を獲得できませんでした。`);
 } else if (rings.length === loot.length) {
-	console.log(`獲得したアイテムは全て「${ring}」でした。`)
+  console.log(`獲得したアイテムは全て「${ring}」でした。`);
 } else {
-	console.log(`${ring}を${rings.length}個獲得しました。`)
+  console.log(`${ring}を${rings.length}個獲得しました。`);
 }
 
 /**
@@ -85,5 +85,5 @@ if (rings.length === 0) {
  *
  * また、次のようにも書ける：
  * loot.filter(item => item.includes(ring))
- * Array.includes()は、配列内に指定した値が存在するかどうかを確かめる配列メソッド。値が存在していれば「ture」、存在しなければ「false」を返す。この方法が2020年現在もっとも正確だし読んでいてわかりやすい（include「インクルード」は「含まれている」という意味の英単語のため）。
+ * Array.includes()は、配列内に指定した値が存在するかどうかを確かめる配列メソッド。値が存在していれば「true」、存在しなければ「false」を返す。この方法が2020年現在もっとも正確だし読んでいてわかりやすい（include「インクルード」は「含まれている」という意味の英単語のため）。
  */

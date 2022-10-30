@@ -28,7 +28,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Spell check
-.vscode/
-
 # End of https://www.toptal.com/developers/gitignore/api/windows
