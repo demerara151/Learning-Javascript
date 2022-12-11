@@ -2,6 +2,8 @@
 
 **Personal reference of Javascript using deno with typescript**
 
+2022/12/11: Testing gpg sign.
+
 ## Requirements
 
 - deno ^1.27.0
