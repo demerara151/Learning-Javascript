@@ -2,9 +2,6 @@
 
 **Personal reference of Javascript using deno with typescript**
 
-2022/12/11: Testing gpg sign and ssh connection.
-2022/12/13: Test new gpg key.
-
 ## Requirements
 
 - deno ^1.27.0
