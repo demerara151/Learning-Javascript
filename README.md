@@ -1,26 +1,18 @@
 # Learning Javascript
 
-**Personal reference of Javascript using deno with typescript**
+**Personal reference of Javascript using deno**
 
 ## Requirements
 
-- deno ^1.27.0
-- vscode
+- deno ^1.29.1
+- vscode 1.7.2
 - deno official extension for vscode
 
 ## Usage
 
-- 単純なスクリプトの場合は、`deno` を使う
-
-  ```powershell
-  deno run main.js
-  ```
-
-- `html` と `css` を必要とするスクリプトの場合は、`miniserve` を使う
-
-  ```powershell
-  miniserve directory_name
-  ```
+```powershell
+deno run src/main.js
+```
 
 ## loop an array
 
@@ -28,8 +20,8 @@
 
 ## Understanding scope
 
-- global scope ファイル内のどこからでも変数や関数を参照できる
-- local scope ブロック内で定義された変数はそのブロックの内部でしか参照できない
+- global scope: ファイル内のどこからでも変数や関数を参照できる
+- local scope: ブロック内で定義された変数はそのブロックの内部でしか参照できない
 
 ## Object
 
@@ -39,7 +31,8 @@
 
 ## fetch url with async-await function
 
-ES6以降の `async / await` と `fetch API` を利用した現在主流のデータリクエスト方法
+ES6以降の `async / await` と `fetch API`
+を利用した現在主流のデータリクエスト方法
 
 - XHRとの大きな違い
 
@@ -54,7 +47,8 @@ ES6以降の `async / await` と `fetch API` を利用した現在主流のデ�
 
 1. データ全体を波カッコ`{}`で囲う
 2. データは `key` と `value` のペア。これはオブジェクトと一緒
-3. ただし、`JSON` の場合は `value` だけでなく `key` も必ずダブルクォーテーションで囲む。`"key":"value"`
+3. ただし、`JSON` の場合は `value` だけでなく `key`
+   も必ずダブルクォーテーションで囲む。`"key":"value"`
 4. それぞれのデータはカンマで区切る
 5. 配列やオブジェクトの値を取り出す方法と同じ方法で値を取り出せる
 
