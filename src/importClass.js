@@ -1,4 +1,4 @@
-import { Monster } from "./exportClass.ts";
+import { Monster } from "./exportClass.js";
 
 const fireGolem = new Monster("ファイヤーゴーレム", 8752, "水属性", [
   "ファイヤーアーム",
@@ -20,14 +20,18 @@ const darkLord = new Monster("闇の守護者", 9999, "光属性", [
 
 darkLord.showStatus();
 
-const random = (x: number): number => Math.floor(Math.random() * x);
+const random = (x) => Math.floor(Math.random() * x);
 
 console.log(
-  `${fireGolem.name}から「${fireGolem.items[random(fireGolem.items.length)]}」を盗んだ`,
+  `${fireGolem.name}から「${
+    fireGolem.items[random(fireGolem.items.length)]
+  }」を盗んだ`,
 );
 
 console.log(
-  `${darkLord.name}から「${darkLord.items[random(darkLord.items.length)]}」を盗んだ`,
+  `${darkLord.name}から「${
+    darkLord.items[random(darkLord.items.length)]
+  }」を盗んだ`,
 );
 
 /*

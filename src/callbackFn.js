@@ -1,7 +1,7 @@
 // 配列メソッドのmap()は、指定された配列内の全ての値に対して関数を実行し、その結果を配列にして出力する。そのため、引数に実行したい関数を書く
-const integers: number[] = [1, 5, -7, 128, 5.76];
+const integers = [1, 5, -7, 128, 5.76];
 
-const cfn: number[] = integers.map((number) => number * 2); // number は配列内のそれぞれの値
+const cfn = integers.map((number) => number * 2); // number は配列内のそれぞれの値
 
 // 配列として値が返るため、配列に格納できない値を返す関数は実行できない
 console.log(cfn); // [ 2, 10, -14, 256, 11.52 ]

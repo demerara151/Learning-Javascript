@@ -3,11 +3,11 @@
 
 // ベースとなるクラスは「class」というキーワードを利用して定義できます。
 class Polygon {
-  name: string;
-  height: number;
-  width: number;
+  name;
+  height;
+  width;
 
-  constructor(height: number, width: number) {
+  constructor(height, width) {
     this.name = "Polygon";
     this.height = height;
     this.width = width;
@@ -34,7 +34,7 @@ console.log(`The width of this polygon is ${p.width}`);
 //クラスは別のクラスを継承できるだけでなく、別のオブジェクトも継承することができます。継承するものはコンストラクターである必要があります。
 // では実際にPolygonを継承して、新しいSquareというクラスを作ってみましょう。
 class Square extends Polygon {
-  constructor(length: number) {
+  constructor(length) {
     // 「super」というキーワードは親のメソッドにアクセスし、呼び出すことができるスーパーコンストラクターを生成します。
     // 「Length」というパラメータで、Polygonの幅と高さを規定した親クラスのコンストラクタを呼び出します。
     super(length, length);
@@ -63,7 +63,7 @@ console.log(`The area of this square is ${s.area}`);
 // ===============================================================
 
 class Rectangle extends Polygon {
-  constructor(height: number, width: number) {
+  constructor(height, width) {
     super(height, width);
     this.name = "Rectangle";
   }
@@ -83,7 +83,7 @@ r.sayName();
 // クラスはstatic（静的な）メソッドを定義できる。これはインスタンス化することなくクラス自身でアクセスすることができる。
 class Triple {
   // 'static'というキーワードをメソッド名の前に付けることで、インスタンスではなくクラスが持つメソッドとして定義できる。逆にインスタンス側はこのメソッドを呼び出せない。
-  static triple(n: number) {
+  static triple(n) {
     n = n || 1;
     return n * 3;
   }
@@ -91,7 +91,7 @@ class Triple {
 
 // 親のクラスの持つstaticメソッドも継承できるし、それを使って更に継承側のクラスのstaticメソッドも定義できる。
 class BiggerTriple extends Triple {
-  static triple(n: number) {
+  static triple(n) {
     return super.triple(n) * super.triple(n);
   }
 }

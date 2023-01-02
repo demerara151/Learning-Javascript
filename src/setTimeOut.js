@@ -4,7 +4,7 @@ setTimeout(function () {
 }, 5000);
 
 // with Promise pattern
-function delay(milliseconds: number) {
+function delay(milliseconds) {
   return new Promise((resolve) => {
     setTimeout(resolve, milliseconds);
   });

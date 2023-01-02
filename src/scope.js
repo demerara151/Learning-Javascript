@@ -2,7 +2,7 @@
 const num = 3;
 console.log(`This num is global variable: ${num}`); // you can access num because num is globally defined
 
-const sum = (num: number, num2: number) => {
+const sum = (num, num2) => {
   const result = num + num2; // you can also access num from here
   console.log(`${num} + ${num2} は ${result}です`);
 };

@@ -1,4 +1,4 @@
-// simple fetch function with async-await
+// simple fetch function with async-await in typescript
 
 interface Heroes {
   squadName: string;

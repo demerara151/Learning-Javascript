@@ -9,7 +9,7 @@ console.log(Math.floor(randomNumber * 100)); // 小数点を切り捨てる 8.7 
 console.log(Math.ceil(randomNumber * 100)); // 小数点を取り入れる 8.7 -> 9 | 6.2 -> 7
 
 // これを関数にしてしまう
-const random = (x: number) => Math.floor(Math.random() * x);
+const random = (x) => Math.floor(Math.random() * x);
 console.log(random(100)); // 0から100までのランダムな数値を出力する
 
 // 円周率

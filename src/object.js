@@ -21,7 +21,7 @@ const user = {
 		しかし、this（ディス）というキーワードを使うことによって呼び出せるようになる
 		this とはこのオブジェクトそのもの、つまり user を指す
 		*/
-    this.blogs.forEach((blog: string) => console.log(blog));
+    this.blogs.forEach((blog) => console.log(blog));
   },
 };
 

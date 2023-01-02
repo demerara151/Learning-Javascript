@@ -5,7 +5,7 @@ const obj = {
     return this.a + 1;
   },
 
-  set c(x: number) {
+  set c(x) {
     this.a = x / 2;
   },
 };

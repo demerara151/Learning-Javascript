@@ -1,11 +1,11 @@
-const random = (x: number) => Math.floor(Math.random() * x);
+const random = (x) => Math.floor(Math.random() * x);
 
 class Monster {
-  name: string;
-  HP: number;
-  items: string[];
+  name;
+  HP;
+  items;
 
-  constructor(name: string, HP: number, items: string[]) {
+  constructor(name, HP, items) {
     this.name = name;
     this.HP = HP;
     this.items = items;

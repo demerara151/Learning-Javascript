@@ -1,10 +1,10 @@
 export class Monster {
-  name: string;
-  HP: number;
-  weak: string;
-  items: string[];
+  name;
+  HP;
+  weak;
+  items;
 
-  constructor(name: string, HP: number, weak: string, items: string[]) {
+  constructor(name, HP, weak, items) {
     this.name = name;
     this.HP = HP;
     this.weak = weak;
