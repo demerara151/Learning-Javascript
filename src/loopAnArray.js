@@ -8,21 +8,21 @@ const people = [
   "Lola",
   "Sam",
   "Kay",
-  "Bruce",
-];
+  "Bruce"
+]
 
-let admitted = "Admit: ";
-let refused = "Refuse: ";
+let admitted = "Admit: "
+let refused = "Refuse: "
 
-people.forEach((person) => {
+people.forEach(person => {
   if (person === "Phil" || person === "Lola") {
-    refused += `${person}, `;
+    refused += `${person}, `
   } else {
-    admitted += `${person}, `;
+    admitted += `${person}, `
   }
-});
+})
 
 // Add dot to the end of the last name
 // Using slice method to extract names til the end (except last ", ")
-console.log(`${refused.slice(0, refused.length - 2)}.`);
-console.log(`${admitted.slice(0, admitted.length - 2)}.`);
+console.log(`${refused.slice(0, refused.length - 2)}.`)
+console.log(`${admitted.slice(0, admitted.length - 2)}.`)

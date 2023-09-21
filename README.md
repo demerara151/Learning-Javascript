@@ -4,8 +4,8 @@
 
 ## Requirements
 
-- deno ^1.29.1
-- vscode 1.7.2
+- deno ^1.30.0
+- vscode 1.74.3
 - deno official extension for vscode
 
 ## Usage
@@ -31,19 +31,19 @@ deno run src/main.js
 
 ## fetch url with async-await function
 
-ES6以降の `async / await` と `fetch API`
+ES6 以降の `async / await` と `fetch API`
 を利用した現在主流のデータリクエスト方法
 
-- XHRとの大きな違い
+- XHR との大きな違い
 
-  - XHRの場合は、リクエストが通らなかったらその時点でプログラムは止まる。それ以降のプログラムは一切実行されない。
+  - XHR の場合は、リクエストが通らなかったらその時点でプログラムは止まる。それ以降のプログラムは一切実行されない。
   - しかし、非同期でコードを書けば、リクエストが通らずデータが返ってこなかったとしても、それ以降のプログラムは問題なく実行される。データが返ってこなかった部分だけが何も表示されない状態になるだけ。
 
 - `response.json()` -> response object becomes JSON
 - `response.text()` -> response object becomes text
 - `response.blob()` -> for binary data like picture
 
-## JSONの書き方
+## JSON の書き方
 
 1. データ全体を波カッコ`{}`で囲う
 2. データは `key` と `value` のペア。これはオブジェクトと一緒

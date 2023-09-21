@@ -7,12 +7,12 @@ const user = {
 
   // 同じように関数も定義できる。オブジェクトではこれを「オブジェクトのメソッド」と呼ぶ
   loggedIn: function () {
-    console.log("ログインに成功しました");
+    console.log("ログインに成功しました")
   },
 
   // 関数の場合、コロンと function というキーワードは省略できる
   loggedOut() {
-    console.log("ログアウトしました");
+    console.log("ログアウトしました")
   },
 
   showBlogs() {
@@ -21,22 +21,22 @@ const user = {
 		しかし、this（ディス）というキーワードを使うことによって呼び出せるようになる
 		this とはこのオブジェクトそのもの、つまり user を指す
 		*/
-    this.blogs.forEach((blog) => console.log(blog));
-  },
-};
+    this.blogs.forEach(blog => console.log(blog))
+  }
+}
 
 // プロパティの出力
-console.log(user.name); // dot notation
-console.log(user["blogs"]); // bracket notation: same as user.blogs
+console.log(user.name) // dot notation
+console.log(user["blogs"]) // bracket notation: same as user.blogs
 
-console.log(user.blogs[0]); // retrieve specific value by specifying index
+console.log(user.blogs[0]) // retrieve specific value by specifying index
 
 // オブジェクトのプロパティの値を変更したい場合は、変数と同じように再代入することで変更できる
-console.log(user.age); // 30
-user.age = 35;
-console.log(user.age); // 35
+console.log(user.age) // 30
+user.age = 35
+console.log(user.age) // 35
 
 // メソッドを呼び出す場合も同じ
-user.loggedIn();
-user.loggedOut();
-user.showBlogs();
+user.loggedIn()
+user.loggedOut()
+user.showBlogs()

@@ -1,38 +1,38 @@
-import { Monster } from "./exportClass.js";
+import { Monster } from "./exportClass.js"
 
 const fireGolem = new Monster("ファイヤーゴーレム", 8752, "水属性", [
   "ファイヤーアーム",
   "2800ギル",
   "炎のオーブ",
   "魔術書：フレア",
-  "破滅の欠片",
-]);
+  "破滅の欠片"
+])
 
-fireGolem.showStatus();
+fireGolem.showStatus()
 
 const darkLord = new Monster("闇の守護者", 9999, "光属性", [
   "闇のアミュレット",
   "3812ギル",
   "ダークケープ",
   "破滅の欠片",
-  "漆黒の盾",
-]);
+  "漆黒の盾"
+])
 
-darkLord.showStatus();
+darkLord.showStatus()
 
-const random = (x) => Math.floor(Math.random() * x);
+const random = x => Math.floor(Math.random() * x)
 
 console.log(
   `${fireGolem.name}から「${
     fireGolem.items[random(fireGolem.items.length)]
-  }」を盗んだ`,
-);
+  }」を盗んだ`
+)
 
 console.log(
   `${darkLord.name}から「${
     darkLord.items[random(darkLord.items.length)]
-  }」を盗んだ`,
-);
+  }」を盗んだ`
+)
 
 /*
 スクリプトファイルのインポート及びエクスポート

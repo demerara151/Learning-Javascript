@@ -4,9 +4,9 @@ const messages = [
   "Merry Christmas my love",
   "A happy Christmas to all the family",
   "You're all I want for Christmas",
-  "Get well soon",
-];
+  "Get well soon"
+]
 
 messages
-  .filter((sentence) => sentence.includes("Christmas"))
-  .forEach((message) => console.log(message));
+  .filter(sentence => sentence.includes("Christmas"))
+  .forEach(message => console.log(message))

@@ -1,24 +1,24 @@
-const random = (x) => Math.floor(Math.random() * x);
+const random = x => Math.floor(Math.random() * x)
 
 class Monster {
-  name;
-  HP;
-  items;
+  name
+  HP
+  items
 
   constructor(name, HP, items) {
-    this.name = name;
-    this.HP = HP;
-    this.items = items;
+    this.name = name
+    this.HP = HP
+    this.items = items
   }
   dieOrNot() {
     if (this.HP <= 0) {
-      console.log(`${this.name}を倒した！`);
+      console.log(`${this.name}を倒した！`)
     } else {
-      console.log(`${this.name}はまだピンピンしている！`);
+      console.log(`${this.name}はまだピンピンしている！`)
     }
   }
   getItems() {
-    return this.items[random(this.items.length)];
+    return this.items[random(this.items.length)]
   }
 }
 
@@ -26,35 +26,35 @@ const monster = new Monster("リヴァイアサン", 8712, [
   "海神のお守り",
   "ウォーターリング",
   "水の紋章",
-  `${random(3000)}ゴールド`,
-]);
+  `${random(3000)}ゴールド`
+])
 
 // 例題１：値の代入を利用してリヴァイアサンを倒してください。
-monster.HP = 0;
-monster.dieOrNot();
+monster.HP = 0
+monster.dieOrNot()
 
 // 例題２：リヴァイアサンのプロパティを表示してください
-console.log(monster);
+console.log(monster)
 
 // 例題３：getItems()を10回繰り返し実行し、その結果を配列に格納して表示してください。
-const loot = [];
-let i = 0;
+const loot = []
+let i = 0
 while (i < 10) {
-  loot.push(monster.getItems());
-  i++;
+  loot.push(monster.getItems())
+  i++
 }
-console.log(loot);
+console.log(loot)
 
 // 例題４：配列「loot」に「ウォーターリング」がいくつ含まれているか確認してコンソールに「ウォーターリング」の獲得数を表示してください。もし結果が０だった場合は、獲得できなかったことを表示するように、獲得したアイテムが全て「ウォーターリング」だった場合は、全て「ウォーターリング」だったことを表示してください。
-const index = monster.items.indexOf("ウォーターリング");
-const ring = monster.items[index];
-const rings = loot.filter((item) => item === ring);
+const index = monster.items.indexOf("ウォーターリング")
+const ring = monster.items[index]
+const rings = loot.filter(item => item === ring)
 if (rings.length === 0) {
-  console.log(`${ring}を獲得できませんでした。`);
+  console.log(`${ring}を獲得できませんでした。`)
 } else if (rings.length === loot.length) {
-  console.log(`獲得したアイテムは全て「${ring}」でした。`);
+  console.log(`獲得したアイテムは全て「${ring}」でした。`)
 } else {
-  console.log(`${ring}を${rings.length}個獲得しました。`);
+  console.log(`${ring}を${rings.length}個獲得しました。`)
 }
 
 /**
