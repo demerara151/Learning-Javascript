@@ -1,6 +1,6 @@
 # Learning Javascript
 
-**Personal reference of Javascript using deno**
+Personal reference of Javascript using deno
 
 ## Requirements
 
